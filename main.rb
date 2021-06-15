@@ -56,14 +56,14 @@ puts
 # determine if the characters of the key appear in order (although not
 # necessarily contiguously) in the sequence
 
-def sequence_search(str1, str2)
-  str2 = str2.chars
-  character = str2.shift
+def sequence_search(word, key)
+  key = key.chars
+  character = key.shift
   i = 0
-  while i < str1.length
-    if str1[i] == character
-      if str2.length > 0
-        character = str2.shift
+  while i < word.length
+    if word[i] == character
+      if key.length > 0
+        character = key.shift
       else
         return true
       end
